@@ -18,14 +18,16 @@
         android:theme="@style/Theme.PROTOTIPO"
         tools:targetApi="31">
         <meta-data
-            android:name="com.google.android.geo.API.KEY"
+            android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB0rVsw1wh1V8VUDFEkl9Rt6MkIXVWtj_A">
 
         </meta-data>
         <activity
             android:name=".Mapa"
             android:exported="false">
-
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
             android:name=".RegisterActivity"

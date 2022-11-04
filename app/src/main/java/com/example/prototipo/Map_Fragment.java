@@ -33,6 +33,9 @@ public class Map_Fragment extends Fragment {
         supportMapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull GoogleMap googleMap) {
+                LatLng castellon = new LatLng( 39.9929000, -0.0576800);
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(castellon));
+                googleMap.moveCamera(CameraUpdateFactory.zoomTo(12));
                 googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                     @Override
                     public void onMapClick(@NonNull LatLng latLng) {

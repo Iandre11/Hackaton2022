@@ -5,82 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".Mapa">
 
 
-    <LinearLayout
+    <FrameLayout
+
+        android:id="@+id/miframelayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView3"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="24dp">
+        app:layout_constraintBottom_toTopOf="@+id/botonNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <FrameLayout
-            android:id="@+id/miframelayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp" />
-    </LinearLayout>
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView3"
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botonNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/botom_nav_menu"
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/horizontalLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="110dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_botton"
-                    android:text="Bicicas" />
-
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="110dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_botton"
-                    android:text="Tram" />
-
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_width="110dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_botton"
-                    android:text="Autobús" />
-
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="110dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_botton"
-                    android:text="Tren" />
-
-            </LinearLayout>
-        </ScrollView>
-    </HorizontalScrollView>
+        android:background="@color/leaf"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:itemBackground="@drawable/buton_glow5"
+        app:itemIconSize="30dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

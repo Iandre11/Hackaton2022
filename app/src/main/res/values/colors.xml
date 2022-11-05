@@ -11,4 +11,7 @@
     <color name="leaf">#7BA669</color>
     <color name="blue">#03A9F4</color>
     <color name="yelow">#FFEB3B</color>
+    <color name="gray">#6D959090</color>
+    <color name="verdeApp">#01EDA3</color>
+    <color name="azulApp">#011C47</color>
 </resources>

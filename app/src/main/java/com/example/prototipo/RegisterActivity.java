@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.regex.Matcher;
@@ -33,6 +34,10 @@ public class RegisterActivity extends AppCompatActivity {
         confirmpasswordRegister =findViewById(R.id.confirmPassw);
         btnRegister = findViewById(R.id.btnRegister);
         botonVolver = findViewById(R.id.btnBack);
+
+
+
+
 
         btnRegister.setOnClickListener(view -> {
                          register();

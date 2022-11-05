@@ -17,7 +17,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:background="@drawable/reg"
+
+            android:background="@drawable/registroimagen"
             >
 
 
@@ -34,6 +35,7 @@
             android:layout_marginTop="50dp">
 
             <ImageView
+                app:tint="@color/azulApp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_person_24"/>
@@ -62,6 +64,7 @@
             >
 
             <ImageView
+                app:tint="@color/azulApp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_email_24"/>
@@ -88,6 +91,7 @@
             android:layout_marginLeft="20dp">
 
             <ImageView
+                app:tint="@color/azulApp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_password"/>
@@ -115,6 +119,7 @@
             android:layout_marginLeft="20dp">
 
             <ImageView
+                app:tint="@color/azulApp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_password"/>
@@ -143,8 +148,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="REGISTRASE"
-        android:background="@drawable/rounded_botton"
-        android:backgroundTint="@color/orange"
+        android:background="@drawable/buton_glow4"
+
         android:textSize="20sp"
         android:layout_gravity="bottom"
         android:layout_marginBottom="100dp"
@@ -158,8 +163,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="YA TENGO CUENTA"
-        android:background="@drawable/rounded_botton"
-        android:backgroundTint="@color/leaf"
+        android:background="@drawable/buton_glow"
+
         android:textSize="20sp"
         android:layout_gravity="bottom"
         android:layout_margin="30dp"

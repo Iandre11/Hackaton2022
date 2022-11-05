@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
@@ -18,10 +19,12 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class Mapa extends AppCompatActivity  {
     Fragment fragment;
-    Button bicicasBoton;
-    Button tramBoton;
-    Button autobusBoton;
+
+    ImageButton nayarsystems;
+    String url="https://www.nayarsystems.com/";
     BottomNavigationView menuNavegacion;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,40 +49,6 @@ public class Mapa extends AppCompatActivity  {
             }
             return true;
         });
-
-
-       /* bicicasBoton=findViewById(R.id.buttonBicicas);
-        tramBoton=findViewById(R.id.buttonTram);
-        autobusBoton=findViewById(R.id.buttonAutobus);
-
-        bicicasBoton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(view.getId()==R.id.buttonBicicas){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.miframelayout,new Map_Fragment()).commit();
-
-                }
-            }
-        });
-
-        tramBoton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(view.getId()==R.id.buttonTram){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.miframelayout,new Map_Fragment2()).commit();
-                }
-            }
-        });
-
-        autobusBoton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(view.getId()==R.id.buttonAutobus){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.miframelayout,new Map_Fragment3()).commit();
-                }
-            }
-        });
-        */
 
     }
 

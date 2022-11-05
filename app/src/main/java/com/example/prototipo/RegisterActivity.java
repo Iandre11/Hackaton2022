@@ -3,6 +3,8 @@ package com.example.prototipo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +24,8 @@ public class RegisterActivity extends AppCompatActivity {
     TextInputEditText passwordRegister;
     TextInputEditText confirmpasswordRegister;
     Button btnRegister;
+    SQLiteDatabase sqbd;
+    BaseDatosUsuarios bd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +61,35 @@ public class RegisterActivity extends AppCompatActivity {
 
         if(!usuario.isEmpty() && !email.isEmpty() && !password.isEmpty() && !confirmPassword.isEmpty()){
             if(isEmailValid(email)){
-                Toast.makeText(this,"Has insertado todos los campos",Toast.LENGTH_LONG).show();
+
+                Cursor cursor = sqbd.query(
+                        BaseDatosUsuarios.TABLA_USUARIOS,
+                        new String[]{BaseDatosUsuarios.CLAVE_PRIMARIA_EMAIL},
+                        BaseDatosUsuarios.CLAVE_PRIMARIA_EMAIL,
+                        new String[]{email},
+                        null,
+                        null,
+                        null
+                );
+                for(int i = 0; i<cursor.getCount();i++){
+                    if(cursor.getString(i).equals(email)){
+                        Toast.makeText(this,"El email ya existe",Toast.LENGTH_LONG).show();
+                        break;
+
+                    }else{
+
+                    }
+                }
+                if(isEmailValid(email)) {
+                    Usuarios usuarioActual = new Usuarios(usuario, email, password);
+                    bd.anadirUsuario(usuarioActual);
+                    Toast.makeText(this, "Usuario registrado con éxito", Toast.LENGTH_LONG).show();
+                }
             }
-            else{
+            else if (!(password.equals(confirmPassword))) {
+                Toast.makeText(this,"Las contraseñas deben ser iguales",Toast.LENGTH_LONG).show();
+            }
+            else if(!isEmailValid(email)){
                 Toast.makeText(this,"El email no es valido",Toast.LENGTH_LONG).show();
             }
         }
@@ -68,6 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
     }
+
 
     public boolean isEmailValid(String email) {
         String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";

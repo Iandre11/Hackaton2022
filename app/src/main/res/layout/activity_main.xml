@@ -14,7 +14,7 @@
 
     <LinearLayout
 
-        android:background="@color/azulApp"
+        android:background="@color/gris"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -24,12 +24,11 @@
         <ImageView
 
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="355dp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:src="@drawable/castego"
             android:scaleType="fitXY"
-            >
+            android:src="@drawable/castego">
 
         </ImageView>
 
@@ -56,7 +55,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
 
-                android:hint="ingresa tu correo electronico"
+                android:hint="Ingrese el correo electronico"
                 android:textColorHint="@color/white"
                 android:inputType="textEmailAddress"
 
@@ -90,7 +89,7 @@
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
 
-                android:hint="ingresa tu contraseña"
+                android:hint="Ingrese la contraseña"
 
                 android:inputType="textPassword"
                 android:minHeight="48dp">
@@ -125,7 +124,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No tienes Cuenta?"
+                android:text="¿No tienes Cuenta?"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 />

@@ -3,25 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.prototipo">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher_foreground"
+        android:icon="@drawable/iconoredondo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.PROTOTIPO"
         tools:targetApi="31">
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB0rVsw1wh1V8VUDFEkl9Rt6MkIXVWtj_A">
+            android:value="AIzaSyB0rVsw1wh1V8VUDFEkl9Rt6MkIXVWtj_A"></meta-data>
 
-        </meta-data>
         <activity
             android:name=".Mapa"
             android:exported="false">

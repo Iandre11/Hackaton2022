@@ -35,7 +35,7 @@
 
             <ImageButton
                 android:id="@+id/User"
-                android:layout_width="72dp"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/iconmaster"
                 android:backgroundTint="@color/azulApp" />
